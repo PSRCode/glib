@@ -19,7 +19,7 @@ if libtoolize --version < /dev/null > /dev/null 2>&1 ; then
 			 sed -e 's/^\(.*\)([^)]*)\(.*\)$/\1\2/g' \
 			     -e 's/^[^0-9]*\([0-9.][0-9.]*\).*/\1/'`
 	case $libtool_version in
-	    1.4*|1.5*|2.2*)
+	    1.4*|1.5*|2.4*)
 		have_libtool=true
 		;;
 	esac
@@ -48,9 +48,9 @@ fi
 	DIE=1
 }
 
-if automake-1.11 --version < /dev/null > /dev/null 2>&1 ; then
-    AUTOMAKE=automake-1.11
-    ACLOCAL=aclocal-1.11
+if automake-1.15 --version < /dev/null > /dev/null 2>&1 ; then
+    AUTOMAKE=automake-1.15
+    ACLOCAL=aclocal-1.15
 else if automake-1.10 --version < /dev/null > /dev/null 2>&1 ; then
     AUTOMAKE=automake-1.10
     ACLOCAL=aclocal-1.10
